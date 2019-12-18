@@ -1,11 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      123456
-    </div>
-  );
+import {
+    Button
+} from 'antd'
+
+const testHoc = (WrapComponent)=>{
+    return class HOCComponent extends Component {
+      render() {
+        return (
+            <>
+                <WrapComponent />
+                <div>This is HOCcOMPONENT</div>
+            </>
+        )
+      }  
+    } 
 }
 
-export default App;
+@testHoc
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+          <Button>123</Button>
+      </div>
+    )
+  }
+}
+
+export default App
