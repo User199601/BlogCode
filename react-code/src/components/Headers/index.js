@@ -1,7 +1,6 @@
 import React,{useState} from 'react';
-import { Menu, Icon,Row,Col, Divider,Avatar } from 'antd';
+import { Menu, Icon,Row,Col} from 'antd';
 import {Link} from 'react-router-dom';
-const { SubMenu } = Menu;
 export default function Headers(){
   const [current,setCurrent] = useState("mail");
   function handleClick(e){
@@ -10,10 +9,10 @@ export default function Headers(){
   }
     return (  
     <Row style={{background:'#fff',paddingTop:15}}>
-      <Col span={18} push={1}>
-       <img src={require("../../static/logo.png")} style={{width:40,height:60}}/>
+      <Col span={16} push={1}>
+       <img src={require("../../static/logo.png")} alt="logo" style={{width:40,height:60}}/>
       </Col>
-      <Col span={6}>
+      <Col span={8}>
       <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal" style={{border:'none'}}>
             <Menu.Item key="mail">
                 <Link to="/article">

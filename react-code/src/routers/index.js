@@ -11,9 +11,8 @@ import {
     UpdateLog,
     Connect,
     ArticleDetail,
-    NotFound
+    NotFound,
 }from '../views'
-
 
 export const mainRouter =  [{
     component:About,

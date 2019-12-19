@@ -1,6 +1,8 @@
 import {Loading} from '../components'
 import Loadable from 'react-loadable' 
 
+
+
 const Article = Loadable({
     loader:()=>import('./article' ),
     loading:Loading

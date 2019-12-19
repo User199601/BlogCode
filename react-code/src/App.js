@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
 
 import {articleDetail} from './routers'
-import {Switch,Route,Redirect} from  'react-router-dom'
-
-import { Layout } from 'antd';
-const { Header, Footer, Content } = Layout;
+import {Switch,Route} from  'react-router-dom'
+import {MainScreen} from './components'
 
 
 class App extends Component {
   render() {
     return ( 
       <div>
+          <MainScreen />
+
+
+          
           <Switch> 
             {
             articleDetail.map(item=>{
